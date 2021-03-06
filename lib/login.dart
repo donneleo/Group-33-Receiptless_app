@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'main.dart';
 
@@ -31,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("Orange Tribes Receiptless App"),
@@ -39,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
             child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <ElevatedButton> [
+                children: <ElevatedButton>[
                   ElevatedButton(
                       child: Text("Login"),
                       onPressed: () {

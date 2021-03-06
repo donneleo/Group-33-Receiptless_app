@@ -1,5 +1,38 @@
 import 'package:flutter/material.dart';
 
+class homepage extends StatelessWidget{
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Homepage"),
+      ),
+      body: new Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <ElevatedButton> [
+            ElevatedButton(
+                child: Text("Display QR Code"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QRRoute()),
+                  );
+                }
+            ),
+            ElevatedButton(
+                child: Text("View Receipts"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ReceiptRoute()),
+                  );
+                }
+            ),
+          ]
+      )
+    );
+  }
+}
+
 
 class QRRoute extends StatelessWidget {
   @override
@@ -38,3 +71,4 @@ class ReceiptRoute extends StatelessWidget {
     );
   }
 }
+
