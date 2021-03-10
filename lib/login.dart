@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:receiptless_app/Register.dart';
 import 'main.dart';
 
 void main() {
