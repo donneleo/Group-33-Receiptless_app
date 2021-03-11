@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:receiptless_app/login.dart';
 import 'package:receiptless_app/main.dart';
 
-class LogIn extends StatefulWidget {
+class loginPage extends StatefulWidget {
   @override
-  _LogInState createState() => _LogInState();
+  _loginPageState createState() => _loginPageState();
 }
 
-class _LogInState extends State<LogIn> {
+class _loginPageState extends State<loginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
