@@ -1,6 +1,6 @@
 //this file defines methods that will interact with firebase authentication
 
-//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthenticationService{
 
