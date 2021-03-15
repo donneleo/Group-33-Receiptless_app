@@ -9,6 +9,22 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+
+  IconData passwordIcon = Icons.visibility;
+  bool obscured = true;
+
+  void showHidePassword() {
+    this.setState(() {
+      if(obscured == true) {
+        passwordIcon = Icons.visibility_off;
+        obscured = false;
+      } else {
+        passwordIcon = Icons.visibility;
+        obscured = true;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,30 +33,37 @@ class _RegisterState extends State<Register> {
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(25),
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <TextField>[
-              TextField(
+            children: <Widget>[
+              TextFormField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "E-mail address:"
                 ),
               ),
-              TextField(
-                obscureText: true,
+              TextFormField(
+                obscureText: obscured,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: "Password:"
+                  labelText: "Password:",
+                  suffixIcon: IconButton(
+                    icon: Icon(passwordIcon),
+                    onPressed: showHidePassword
+                  )
                 ),
               ),
-              TextField(
+              TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Retype Password:"
                 ),
-              )
+              ),
+              ElevatedButton(
+                  child: Text("Register"),
+                  onPressed: null)
             ],
           ),
         ),
