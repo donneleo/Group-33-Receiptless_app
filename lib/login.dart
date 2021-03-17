@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:receiptless_app/Register.dart';
+import 'package:receiptless_app/authenticate/Register.dart';
 import 'package:receiptless_app/authenticate/loginPage.dart';
 import 'main.dart';
 

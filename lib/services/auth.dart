@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthenticationService{
 
-  //this line to declare final private property type firebase object here FirebaseAuth
+  //final FirebaseAuth _auth = FirebaseAuth.instance;
   
   //sign in anonymously(for now)
 
