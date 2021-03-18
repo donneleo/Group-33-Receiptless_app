@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:receiptless_app/authenticate/Register.dart';
 import 'package:receiptless_app/authenticate/loginPage.dart';
 import 'main.dart';
-
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
