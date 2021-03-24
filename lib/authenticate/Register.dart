@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:receiptless_app/services/auth.dart';
 
-import '../login.dart';
+import 'login.dart';
 import '../main.dart';
 
 class Register extends StatefulWidget {

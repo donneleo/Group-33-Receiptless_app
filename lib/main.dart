@@ -1,78 +1,23 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:receiptless_app/wrapper.dart';
 
-/*void main() =>runApp(MaterialApp(
-  home: homepage(),
-));
-*/
-class homepage extends StatelessWidget{
-  Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Homepage"),
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Receiptless App',
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      body: new Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <ElevatedButton> [
-            ElevatedButton(
-                child: Text("Display QR Code"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QRRoute()),
-                  );
-                }
-            ),
-            ElevatedButton(
-                child: Text("View Receipts"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ReceiptRoute()),
-                  );
-                }
-            ),
-          ]
-      )
+      home: Wrapper(),
     );
   }
 }
-
-
-class QRRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("QR Code"),
-        ),
-        body: Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text("Return to Homepage")
-            )
-        )
-    );
-  }
-}
-
-class ReceiptRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("View Receipts"),
-        ),
-        body: Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text("Return to Homepage")
-            )
-        )
-    );
-  }
-}
-

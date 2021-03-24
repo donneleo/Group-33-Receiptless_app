@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:receiptless_app/authenticate/Register.dart';
 import 'package:receiptless_app/authenticate/loginPage.dart';
-import 'main.dart';
+import '../main.dart';
 import 'package:firebase_core/firebase_core.dart';
-void main() async {
+/*void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
@@ -23,18 +23,14 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Orange Tribes Receiptless App'),
     );
   }
-}
+}*/
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class AuthenticatePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _AuthenticatePageState createState() => _AuthenticatePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _AuthenticatePageState extends State<AuthenticatePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
