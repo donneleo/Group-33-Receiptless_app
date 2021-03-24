@@ -93,7 +93,9 @@ class _RegisterState extends State<Register> {
                     if(_formKey.currentState.validate()) {
                       dynamic result = await _auth.registerEmailAndPassword(email, password);
                       if(result == null) {
-                        setState(() => error = 'error here (TO BE CHANGED)');
+                        setState(() => error = 'Error Registering');
+                      } else {
+                        Navigator.pop(context);
                       }
                     }
                   },

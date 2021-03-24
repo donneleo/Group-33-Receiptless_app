@@ -66,6 +66,7 @@ class _loginPageState extends State<loginPage> {
                     }
                     else{
                       print('LoggedIn');
+                      Navigator.pop(context);
                     }
                   }
                 },
