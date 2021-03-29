@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:receiptless_app/authenticate/userClass.dart';
+import 'package:receiptless_app/services/database.dart';
 
 class AuthenticationService{
 
@@ -35,6 +36,10 @@ class AuthenticationService{
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User user = result.user;
+
+      // create a new user record in the database
+      await DatabaseService(uid: user.uid).newUserRecord(email);
+
       return _userFromFirebase(user);
     } catch(e) {
       print(e.toString());
