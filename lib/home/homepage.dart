@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:receiptless_app/qrcode/QRRoute.dart';
 import 'package:receiptless_app/services/auth.dart';
 
 class HomePage extends StatelessWidget{
@@ -46,24 +47,7 @@ class HomePage extends StatelessWidget{
 }
 
 
-class QRRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("QR Code"),
-        ),
-        body: Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text("Return to Homepage")
-            )
-        )
-    );
-  }
-}
+
 
 class ReceiptRoute extends StatelessWidget {
   @override
