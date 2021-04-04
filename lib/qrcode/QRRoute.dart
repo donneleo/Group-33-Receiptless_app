@@ -11,8 +11,11 @@ class QRRoute extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget> [
               QrImage(
+                padding: EdgeInsets.only(bottom:10.0),
                 data: userToken,
                 version: QrVersions.auto,
                 size: MediaQuery.of(context).size.width/1.3 ,
