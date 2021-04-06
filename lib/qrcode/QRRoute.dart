@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-String userToken = " test userToken ";
+import 'package:receiptless_app/services/auth.dart';
+
 
 class QRRoute extends StatelessWidget {
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -16,7 +18,7 @@ class QRRoute extends StatelessWidget {
             children: <Widget> [
               QrImage(
                 padding: EdgeInsets.only(bottom:10.0),
-                data: userToken,
+                data: getUserUid(),
                 version: QrVersions.auto,
                 size: MediaQuery.of(context).size.width/1.3 ,
                 errorStateBuilder: (cxt, err) {
@@ -51,4 +53,9 @@ class QRRoute extends StatelessWidget {
 
     );
   }
-}
+  getUserUid(){
+    String uid = AuthenticationService().getCurrentUID();
+    return uid;
+  }
+
+  }

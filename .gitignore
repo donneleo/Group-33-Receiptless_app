@@ -39,3 +39,6 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+/android/app/src/debug/google-services.json
+/ios/Podfile
+/ios/Podfile.lock
