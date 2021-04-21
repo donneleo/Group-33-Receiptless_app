@@ -2,6 +2,10 @@
 
 A new Flutter application.
 
+Please Note: In order for this project to run, you must download the google-services.json file from
+within the Google Firebase settings, and place it in the project so that it will have the path
+/android/app/google-services.json
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

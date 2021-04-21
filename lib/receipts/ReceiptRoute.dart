@@ -5,14 +5,7 @@ import 'package:receiptless_app/services/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ReceiptRoute extends StatelessWidget {
-  //ReceiptRoute();
   @override
-  //ReceiptRouteState createState() => ReceiptRouteState();
-//}
-
-//class ReceiptRouteState extends State<ReceiptRoute> {
-  //ReceiptRouteState();
-
 
   Widget build(BuildContext context) {
     String data = getUserUid();
